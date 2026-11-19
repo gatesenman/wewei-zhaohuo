@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>维维找货</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: file:; img-src * data: file:; font-src 'self' data: file:">
+<link rel="stylesheet" href="vendor/remixicon.css"><link rel="stylesheet" href="styles.css"></head>
+<body class="light">
+<header id="titlebar">
+  <div class="tb-brand"><img src="../build/icon.png"><span>维维找货</span><em>v2.2</em></div>
+  <div class="tb-drag"></div>
+  <div class="tb-actions">
+    <button class="tb-btn" id="btnTheme" data-tip="切换主题 Ctrl+Shift+L"><i class="ri-moon-line"></i></button>
+    <button class="tb-btn" id="btnSettings" data-tip="设置 Ctrl+,"><i class="ri-settings-3-line"></i></button>
+    <span class="tb-sep"></span>
+    <button class="tb-win" data-win="min"><i class="ri-subtract-line"></i></button>
+    <button class="tb-win" data-win="max"><i class="ri-checkbox-blank-line" id="maxIcon"></i></button>
+    <button class="tb-win close" data-win="close"><i class="ri-close-line"></i></button>
+  </div>
+</header>
+<div id="app">
+  <aside id="sidebar">
+    <div class="sb-head"><span>搜索平台</span>
+      <div class="sb-tools"><button class="icon-btn sm" id="selAll" data-tip="全选"><i class="ri-checkbox-multiple-line"></i></button><button class="icon-btn sm" id="selNone" data-tip="全不选"><i class="ri-checkbox-blank-line"></i></button><button class="icon-btn sm" id="openManager" data-tip="平台管理"><i class="ri-equalizer-line"></i></button></div></div>
+    <div class="sb-scroll">
+      <ul id="platformList"></ul>
+      <div class="sb-head"><span>最近搜索</span><button class="icon-btn sm" id="clearHistory" data-tip="清空"><i class="ri-delete-bin-6-line"></i></button></div>
+      <ul id="historyList" class="mini-list"></ul>
+      <div class="sb-head"><span>收藏</span></div>
+      <ul id="favList" class="mini-list"></ul>
+    </div>
+  </aside>
+  <main>
+    <div id="toolbar">
+      <div class="seg" id="modes">
+        <button data-mode="text" class="active"><i class="ri-font-size"></i>文字</button>
+        <button data-mode="image"><i class="ri-image-line"></i>图片</button>
+        <button data-mode="ai"><i class="ri-sparkling-2-line"></i>AI</button>
+      </div>
+      <div class="searchbox" id="searchbox">
+        <i class="ri-search-line lead"></i>
+        <div id="imgChip" hidden><img id="imgPreview"><span id="imgName"></span><i class="ri-close-circle-fill" id="imgClear"></i></div>
+        <input id="q" spellcheck="false" placeholder="搜索商品，回车一键搜索全部已选平台">
+        <kbd>Ctrl K</kbd>
+        <button class="icon-btn" id="pickImg" data-tip="选择图片（也可粘贴或拖入）"><i class="ri-camera-line"></i></button>
+      </div>
+      <button id="go" class="btn primary"><i class="ri-search-2-line"></i>一键搜索</button>
+      <div class="seg" id="views">
+        <button data-view="tabs" class="active" data-tip="标签 Ctrl+1"><i class="ri-window-line"></i></button>
+        <button data-view="grid4" data-tip="2×2 宫格 Ctrl+2"><i class="ri-layout-grid-line"></i></button>
+        <button data-view="grid6" data-tip="3×2 宫格 Ctrl+3"><i class="ri-grid-line"></i></button>
+        <button data-view="compare" data-tip="左右对比 Ctrl+4"><i class="ri-layout-column-line"></i></button>
+      </div>
+    </div>
+    <nav id="tabbar"></nav>
+    <div id="compareBar" hidden><i class="ri-contrast-2-line"></i>对比 <select id="cmpL"></select><i class="ri-arrow-left-right-line"></i><select id="cmpR"></select></div>
+    <section id="stage" class="tabs">
+      <div id="empty">
+        <div class="empty-ico"><i class="ri-shopping-bag-3-line"></i></div>
+        <h2>一次搜索，全网找货</h2>
+        <p>输入关键词、粘贴图片或描述需求，同时在多个电商平台搜索</p>
+        <div class="chips" id="hotChips"></div>
+        <div class="shortcuts"><span><kbd>Ctrl K</kbd>聚焦搜索</span><span><kbd>Ctrl V</kbd>粘贴图片搜索</span><span><kbd>Ctrl 1-4</kbd>切换视图</span><span><kbd>Ctrl ,</kbd>设置</span></div>
+      </div>
+    </section>
+    <footer id="status"><span><i class="ri-information-line"></i><span id="statusText">就绪</span></span><span id="loginSummary"></span></footer>
+  </main>
+</div>
+
+<div id="modal" hidden>
+  <div class="dialog settings">
+    <div class="dlg-side">
+      <h3>设置</h3>
+      <button data-sp="general" class="active"><i class="ri-settings-4-line"></i>常规</button>
+      <button data-sp="platforms"><i class="ri-apps-2-line"></i>平台管理</button>
+      <button data-sp="accounts"><i class="ri-user-3-line"></i>账号登录</button>
+      <button data-sp="keys"><i class="ri-keyboard-line"></i>快捷键</button>
+      <button data-sp="about"><i class="ri-information-line"></i>关于</button>
+    </div>
+    <div class="dlg-body">
+      <button class="icon-btn dlg-close" id="closeModal"><i class="ri-close-line"></i></button>
+      <section data-page="general">
+        <h2>常规</h2>
+        <div class="field-row"><label>主题</label><div class="seg" id="themeSeg"><button data-theme="light"><i class="ri-sun-line"></i>浅色</button><button data-theme="dark"><i class="ri-moon-line"></i>深色</button><button data-theme="system"><i class="ri-computer-line"></i>跟随系统</button></div></div>
+        <div class="field-row"><label>默认访问方式<small class="hint">各平台可在“平台管理”或页面工具栏单独设置</small></label><div class="seg" id="accessSeg"><button data-am="mobile"><i class="ri-smartphone-line"></i>移动端</button><button data-am="desktop"><i class="ri-computer-line"></i>电脑端</button></div></div>
+        <div class="field-row"><label>移动端显示宽度</label><select id="setMobileWidth"><option value="375">375px（iPhone SE）</option><option value="414">414px（iPhone Plus）</option><option value="fill">填满面板</option></select></div>
+        <div class="field-row"><label>移动端设备标识</label><select id="setMobileUA"><option value="iphone">iPhone (Safari)</option><option value="android">Android (Chrome)</option></select></div>
+        <div class="field-row"><label>默认视图</label><select id="setView"><option value="tabs">标签</option><option value="grid4">2×2 宫格</option><option value="grid6">3×2 宫格</option><option value="compare">左右对比</option></select></div>
+        <div class="field-row"><label>搜索时切到首个平台</label><input type="checkbox" class="switch" id="setFocusFirst"></div>
+        <div class="field-row"><label>启动时打开首页</label><input type="checkbox" class="switch" id="setOpenHome"></div>
+        <div class="field-row"><label>搜索历史</label><button class="btn" id="setClearHistory"><i class="ri-delete-bin-6-line"></i>清空历史</button></div>
+      </section>
+      <section data-page="platforms" hidden>
+        <h2>平台管理 <small>拖拽排序 · 开关控制是否显示</small></h2>
+        <div class="pm-actions">
+          <button class="btn primary" id="pmAdd"><i class="ri-add-line"></i>添加平台</button>
+          <button class="btn" id="pmImport"><i class="ri-upload-2-line"></i>导入</button>
+          <button class="btn" id="pmExport"><i class="ri-download-2-line"></i>导出</button>
+          <button class="btn ghost" id="pmReset"><i class="ri-refresh-line"></i>恢复默认</button>
+        </div>
+        <ul id="pmList"></ul>
+      </section>
+      <section data-page="accounts" hidden><h2>账号登录 <small>登录状态保存在本机，重启后无需重新登录</small></h2><ul id="accList"></ul></section>
+      <section data-page="keys" hidden><h2>快捷键</h2><table class="keys">
+        <tr><td>聚焦搜索框</td><td><kbd>Ctrl</kbd> <kbd>K</kbd></td></tr><tr><td>一键搜索</td><td><kbd>Enter</kbd></td></tr>
+        <tr><td>粘贴图片以图搜货</td><td><kbd>Ctrl</kbd> <kbd>V</kbd></td></tr><tr><td>切换视图</td><td><kbd>Ctrl</kbd> <kbd>1</kbd>–<kbd>4</kbd></td></tr>
+        <tr><td>切换文字/图片/AI</td><td><kbd>Alt</kbd> <kbd>1</kbd>–<kbd>3</kbd></td></tr><tr><td>下/上一个标签</td><td><kbd>Ctrl</kbd> <kbd>Tab</kbd> / <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Tab</kbd></td></tr>
+        <tr><td>刷新当前平台</td><td><kbd>F5</kbd></td></tr><tr><td>切换主题</td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>L</kbd></td></tr>
+        <tr><td>设置</td><td><kbd>Ctrl</kbd> <kbd>,</kbd></td></tr><tr><td>关闭对话框</td><td><kbd>Esc</kbd></td></tr></table></section>
+      <section data-page="about" hidden><div class="about"><img src="../build/icon.png"><h2>维维找货 2.2.0</h2><p>跨电商平台一键找货工具</p><p class="muted">内置浏览器 · 各平台独立会话 · 数据仅保存在本机</p></div></section>
+    </div>
+  </div>
+</div>
+
+<div id="editor" hidden>
+  <form class="dialog form" id="pform">
+    <h2 id="pformTitle">添加平台</h2>
+    <div class="grid2">
+      <label>名称<input name="name" required placeholder="例如：某某商城"></label>
+      <label>ID<input name="id" required pattern="[a-z0-9_\-]+" placeholder="小写字母/数字，如 mall1"></label>
+      <div class="span2 logo-row"><span class="logo-prev" id="logoPreview"></span><div><b>平台图标</b><small>保存时会自动从官网获取，也可以上传自己的图片</small></div>
+        <button type="button" class="btn" id="logoFetch"><i class="ri-download-cloud-2-line"></i>自动获取</button><button type="button" class="btn" id="logoUpload"><i class="ri-upload-2-line"></i>上传</button><button type="button" class="btn ghost" id="logoClear">清除</button></div>
+      <label>主题色<input name="color" type="color" value="#ff5c28"></label>
+      <label>图标（Remix Icon 类名，可留空）<input name="icon" placeholder="如 ri-store-2-line"></label>
+      <label class="span2">首页 URL<input name="home" type="url" required placeholder="https://"></label>
+      <label class="span2">搜索 URL 模板（用 {q} 表示关键词，留空=打开首页手动搜索）<input name="search" placeholder="https://example.com/search?q={q}"></label>
+      <label class="span2">登录页 URL<input name="login" placeholder="https://"></label>
+      <label>移动端首页 URL（可选）<input name="mobileHome" placeholder="留空则用电脑端"></label>
+      <label>移动端登录 URL（可选）<input name="mobileLogin" placeholder="留空则用电脑端"></label>
+      <label class="span2">移动端搜索 URL 模板（可选，含 {q}，留空则用电脑端）<input name="mobileSearch" placeholder="https://m.example.com/search?q={q}"></label>
+      <label>登录判定 Cookie 域名<input name="cookieDomain" placeholder="example.com"></label>
+      <label>登录判定 Cookie 名（逗号分隔）<input name="cookieNames" placeholder="token,uid"></label>
+      <label>访问方式<select name="accessMode"><option value="follow">跟随全局</option><option value="mobile">移动端</option><option value="desktop">电脑端</option></select></label>
+      <label>会话分区（同分区共享登录）<input name="partition" placeholder="默认同 ID"></label>
+      <label>图片搜索<select name="image"><option value="false">不支持</option><option value="true">支持（自动上传）</option><option value="manual">手动</option></select></label>
+      <label>AI 搜索<select name="ai"><option value="false">不支持</option><option value="true">支持</option><option value="manual">手动</option></select></label>
+      <label class="span2">图片搜索页 URL（可选）<input name="imageUrl" placeholder="默认首页"></label>
+      <label class="span2">AI 搜索 URL 模板（可选，支持 {q}）<input name="aiUrl"></label>
+      <label class="span2">备注<input name="note"></label>
+    </div>
+    <div class="form-actions"><span class="err" id="pformErr"></span><button type="button" class="btn" id="pformTest"><i class="ri-flask-line"></i>测试搜索</button><button type="button" class="btn ghost" id="pformCancel">取消</button><button type="submit" class="btn primary">保存</button></div>
+  </form>
+</div>
+
+<div id="toasts"></div>
+<div id="drop" hidden><i class="ri-image-add-line"></i><span>松开以图搜货</span></div>
+<div id="tooltip" hidden></div>
+<script src="renderer.js"></script></body></html>

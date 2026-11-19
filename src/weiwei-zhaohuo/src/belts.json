@@ -1,0 +1,448 @@
+[
+ {
+  "city": "义乌",
+  "province": "浙江",
+  "industry": "小商品/饰品/玩具/日用百货",
+  "market": "义乌国际商贸城",
+  "sites": [
+   "yiwugo",
+   "iyicaibao"
+  ]
+ },
+ {
+  "city": "杭州四季青",
+  "province": "浙江",
+  "industry": "女装",
+  "market": "四季青服装市场",
+  "sites": [
+   "hznzcn",
+   "zwd17"
+  ]
+ },
+ {
+  "city": "广州",
+  "province": "广东",
+  "industry": "服装/皮具/鞋/化妆品/童装",
+  "market": "白马、十三行、沙河、站西、桂花岗皮具、中大布匹",
+  "sites": [
+   "vvic",
+   "zwd17",
+   "wsy",
+   "bao66"
+  ]
+ },
+ {
+  "city": "虎门",
+  "province": "广东",
+  "industry": "女装",
+  "market": "富民时装城",
+  "sites": [
+   "vvic"
+  ]
+ },
+ {
+  "city": "深圳华强北",
+  "province": "广东",
+  "industry": "电子元器件/数码",
+  "market": "华强北电子市场、赛格广场",
+  "sites": [
+   "hqew",
+   "szlcsc",
+   "ickey",
+   "hqchip"
+  ]
+ },
+ {
+  "city": "东莞",
+  "province": "广东",
+  "industry": "电子/五金/塑料原材料/毛织(大朗)",
+  "market": "樟木头塑胶市场、大朗毛织",
+  "sites": []
+ },
+ {
+  "city": "佛山",
+  "province": "广东",
+  "industry": "家具(乐从)/陶瓷/铝材/童装/小家电(顺德)",
+  "market": "乐从家具城、华夏陶瓷城",
+  "sites": []
+ },
+ {
+  "city": "中山古镇",
+  "province": "广东",
+  "industry": "灯具灯饰",
+  "market": "古镇灯饰城、小榄五金",
+  "sites": []
+ },
+ {
+  "city": "潮州",
+  "province": "广东",
+  "industry": "陶瓷/婚纱礼服",
+  "market": "枫溪陶瓷城",
+  "sites": []
+ },
+ {
+  "city": "汕头澄海",
+  "province": "广东",
+  "industry": "玩具",
+  "market": "澄海玩具批发市场",
+  "sites": []
+ },
+ {
+  "city": "揭阳",
+  "province": "广东",
+  "industry": "小家电/五金不锈钢",
+  "market": "揭阳小家电批发市场",
+  "sites": []
+ },
+ {
+  "city": "晋江",
+  "province": "福建",
+  "industry": "运动鞋服",
+  "market": "晋江鞋业市场",
+  "sites": [
+   "cnxieku"
+  ]
+ },
+ {
+  "city": "莆田",
+  "province": "福建",
+  "industry": "鞋",
+  "market": "莆田鞋业",
+  "sites": [
+   "cnxieku"
+  ]
+ },
+ {
+  "city": "石狮",
+  "province": "福建",
+  "industry": "休闲服装/面辅料",
+  "market": "石狮服装城",
+  "sites": []
+ },
+ {
+  "city": "德化",
+  "province": "福建",
+  "industry": "陶瓷",
+  "market": "德化陶瓷批发市场",
+  "sites": []
+ },
+ {
+  "city": "安溪",
+  "province": "福建",
+  "industry": "茶叶(铁观音)/藤铁工艺",
+  "market": "安溪茶叶批发市场",
+  "sites": []
+ },
+ {
+  "city": "温州",
+  "province": "浙江",
+  "industry": "鞋/眼镜/文化用品",
+  "market": "温州鞋都",
+  "sites": [
+   "cnxieku"
+  ]
+ },
+ {
+  "city": "乐清柳市",
+  "province": "浙江",
+  "industry": "低压电器",
+  "market": "柳市电器城",
+  "sites": []
+ },
+ {
+  "city": "台州",
+  "province": "浙江",
+  "industry": "水泵/模具/汽摩配/日用品(路桥)",
+  "market": "路桥中国日用品商城、黄岩模具",
+  "sites": []
+ },
+ {
+  "city": "温岭",
+  "province": "浙江",
+  "industry": "女鞋/童鞋/水泵",
+  "market": "温岭鞋业",
+  "sites": [
+   "cnxieku"
+  ]
+ },
+ {
+  "city": "永康",
+  "province": "浙江",
+  "industry": "五金工具/保温杯/电动车",
+  "market": "中国科技五金城",
+  "sites": []
+ },
+ {
+  "city": "宁波",
+  "province": "浙江",
+  "industry": "文具/家电(慈溪)/塑料(余姚)",
+  "market": "慈溪小家电市场、余姚中国塑料城",
+  "sites": []
+ },
+ {
+  "city": "绍兴柯桥",
+  "province": "浙江",
+  "industry": "面料/家纺",
+  "market": "中国轻纺城",
+  "sites": [
+   "texindex"
+  ]
+ },
+ {
+  "city": "绍兴大唐",
+  "province": "浙江",
+  "industry": "袜子",
+  "market": "大唐袜业市场",
+  "sites": []
+ },
+ {
+  "city": "海宁",
+  "province": "浙江",
+  "industry": "皮革/经编",
+  "market": "海宁中国皮革城",
+  "sites": []
+ },
+ {
+  "city": "湖州织里",
+  "province": "浙江",
+  "industry": "童装",
+  "market": "织里童装城",
+  "sites": [
+   "3e3e"
+  ]
+ },
+ {
+  "city": "嘉兴濮院",
+  "province": "浙江",
+  "industry": "羊毛衫",
+  "market": "濮院羊毛衫市场",
+  "sites": []
+ },
+ {
+  "city": "桐乡",
+  "province": "浙江",
+  "industry": "羊毛衫/蚕丝被",
+  "market": "桐乡国际蚕丝城",
+  "sites": []
+ },
+ {
+  "city": "南通叠石桥",
+  "province": "江苏",
+  "industry": "家纺",
+  "market": "叠石桥家纺城",
+  "sites": [
+   "zhaojiafang"
+  ]
+ },
+ {
+  "city": "常熟",
+  "province": "江苏",
+  "industry": "服装(中老年女装/男装)",
+  "market": "常熟服装城",
+  "sites": []
+ },
+ {
+  "city": "丹阳",
+  "province": "江苏",
+  "industry": "眼镜",
+  "market": "丹阳眼镜城",
+  "sites": []
+ },
+ {
+  "city": "宿迁沙集",
+  "province": "江苏",
+  "industry": "板式家具/睡眠家居",
+  "market": "沙集电商家具",
+  "sites": []
+ },
+ {
+  "city": "宜兴",
+  "province": "江苏",
+  "industry": "紫砂壶",
+  "market": "丁蜀紫砂市场",
+  "sites": []
+ },
+ {
+  "city": "盛泽",
+  "province": "江苏",
+  "industry": "丝绸/化纤面料",
+  "market": "东方丝绸市场",
+  "sites": []
+ },
+ {
+  "city": "白沟",
+  "province": "河北",
+  "industry": "箱包",
+  "market": "白沟箱包市场",
+  "sites": [
+   "bao66"
+  ]
+ },
+ {
+  "city": "安平",
+  "province": "河北",
+  "industry": "丝网",
+  "market": "安平丝网市场",
+  "sites": []
+ },
+ {
+  "city": "平乡",
+  "province": "河北",
+  "industry": "童车/自行车",
+  "market": "平乡童车城",
+  "sites": []
+ },
+ {
+  "city": "保定",
+  "province": "河北",
+  "industry": "箱包(白沟)/羽绒(容城)",
+  "market": "",
+  "sites": []
+ },
+ {
+  "city": "临沂",
+  "province": "山东",
+  "industry": "小商品/五金/板材/箱包",
+  "market": "临沂商城",
+  "sites": []
+ },
+ {
+  "city": "寿光",
+  "province": "山东",
+  "industry": "蔬菜",
+  "market": "寿光农产品物流园",
+  "sites": [
+   "ymt"
+  ]
+ },
+ {
+  "city": "曹县",
+  "province": "山东",
+  "industry": "汉服/木制品/演出服",
+  "market": "曹县汉服产业园",
+  "sites": []
+ },
+ {
+  "city": "博兴",
+  "province": "山东",
+  "industry": "厨具/商用厨房设备",
+  "market": "博兴厨具城",
+  "sites": []
+ },
+ {
+  "city": "即墨",
+  "province": "山东",
+  "industry": "服装/童装",
+  "market": "即墨服装批发市场",
+  "sites": []
+ },
+ {
+  "city": "景德镇",
+  "province": "江西",
+  "industry": "陶瓷",
+  "market": "景德镇陶瓷市场",
+  "sites": []
+ },
+ {
+  "city": "南康",
+  "province": "江西",
+  "industry": "实木家具",
+  "market": "南康家具城",
+  "sites": []
+ },
+ {
+  "city": "成都",
+  "province": "四川",
+  "industry": "女鞋/商贸",
+  "market": "成都国际商贸城",
+  "sites": [
+   "go2"
+  ]
+ },
+ {
+  "city": "昆明斗南",
+  "province": "云南",
+  "industry": "鲜花",
+  "market": "斗南花卉市场",
+  "sites": []
+ },
+ {
+  "city": "昆明",
+  "province": "云南",
+  "industry": "茶叶(普洱)/木山茶",
+  "market": "雄达茶城",
+  "sites": []
+ },
+ {
+  "city": "新疆",
+  "province": "新疆",
+  "industry": "干果/红枣/葡萄干",
+  "market": "华凌市场",
+  "sites": [
+   "ymt"
+  ]
+ },
+ {
+  "city": "武汉汉正街",
+  "province": "湖北",
+  "industry": "服装/小商品",
+  "market": "汉正街批发市场",
+  "sites": []
+ },
+ {
+  "city": "北京",
+  "province": "北京",
+  "industry": "服装(动物园,已外迁)",
+  "market": "百荣世贸商城",
+  "sites": []
+ },
+ {
+  "city": "上海七浦路",
+  "province": "上海",
+  "industry": "服装",
+  "market": "七浦路服装市场",
+  "sites": []
+ },
+ {
+  "city": "许昌",
+  "province": "河南",
+  "industry": "假发",
+  "market": "许昌发制品市场",
+  "sites": []
+ },
+ {
+  "city": "郑州",
+  "province": "河南",
+  "industry": "服装(银基)",
+  "market": "银基商贸城",
+  "sites": []
+ },
+ {
+  "city": "沈阳五爱",
+  "province": "辽宁",
+  "industry": "服装/小商品",
+  "market": "五爱市场",
+  "sites": []
+ },
+ {
+  "city": "兴城",
+  "province": "辽宁",
+  "industry": "泳装",
+  "market": "兴城泳装城",
+  "sites": []
+ },
+ {
+  "city": "重庆朝天门",
+  "province": "重庆",
+  "industry": "服装/小商品",
+  "market": "朝天门批发市场",
+  "sites": []
+ },
+ {
+  "city": "株洲芦淞",
+  "province": "湖南",
+  "industry": "服装",
+  "market": "芦淞服饰市场",
+  "sites": []
+ }
+]
