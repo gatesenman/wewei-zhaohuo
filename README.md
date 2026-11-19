@@ -15,17 +15,15 @@
 
 ## 从源码运行
 
-源码在 `src/weiwei-zhaohuo/`。本仓库不包含安装包。
+源码在仓库根目录。本仓库不包含安装包。
 
 ```bash
-cd src/weiwei-zhaohuo
 npm install
 npm start
 ```
-
 ## 文档
 
-- [源码 README](src/weiwei-zhaohuo/README.md)
+- [源码 README](README.original.md)
 - [产业带研究](产业带研究.md)
 - [3.4 界面评审](ui-review-3.4.md)
 
@@ -50,17 +48,15 @@ npm start
 
 ## Getting started
 
-Source is under `src/weiwei-zhaohuo/`. This repository does not include installers.
+Source is at the repository root. This repository does not include installers.
 
 ```bash
-cd src/weiwei-zhaohuo
 npm install
 npm start
 ```
-
 ## Documentation
 
-- [源码 README](src/weiwei-zhaohuo/README.md)
+- [源码 README](README.original.md)
 - [产业带研究](产业带研究.md)
 - [3.4 界面评审](ui-review-3.4.md)
 
