@@ -8,6 +8,18 @@
 - 新增平台：编辑 `src/platforms.js`，补充搜索 URL、登录 Cookie 与能力矩阵。
 - 每个平台独立 `persist:<id>` 会话（淘宝 / 天猫 / 闲鱼共享 `persist:taobao`），数据在 `%APPDATA%/维维找货`。
 
+## 下载
+
+本仓库目前没有已发布的 GitHub Release 安装包。请从源码运行。GitHub 自动生成的 Source code zip/tar 不算安装包。
+
+## 界面截图
+
+以下为仓库外 e2e-v33 目录中已目视确认的真实产品窗口，窗口标题为「维维找货 v3.3」。README 标注的产品版本是 **3.4.0**，因此这些图不是 3.4.0，也不是 Windows 安装包安装后的截图。搜索词「保温杯」为示例查询。未使用设置页或密钥页截图。
+
+| 工作台（v3.3，深色主题） | 卡片结果（示例查询「保温杯」） |
+| --- | --- |
+| ![维维找货 v3.3 工作台](docs/screenshots/01-workbench-v3.3.png) | ![维维找货 v3.3 卡片结果](docs/screenshots/02-results-card-v3.3.png) |
+
 ## 技术栈
 
 - Electron
@@ -47,6 +59,18 @@ npm start
 - One-click search and comparison across multiple e-commerce platforms.
 - Add a platform by editing `src/platforms.js` with its search URL, login cookie, and capability matrix.
 - Each platform gets a `persist:<id>` session (Taobao / Tmall / Xianyu share `persist:taobao`). Data lives in `%APPDATA%/维维找货` on Windows.
+
+## Downloads
+
+This repository has no published GitHub Release installer. Run it from source. The automatic Source code zip/tar from GitHub is not an installer.
+
+## Screenshots
+
+These shots were visually confirmed from a local e2e-v33 capture. The window title is "维维找货 v3.3". The README product version is **3.4.0**, so these are not 3.4.0 shots and not captures after a Windows installer. The query "保温杯" is sample data. Settings or API-key pages were not used.
+
+| Workbench (v3.3, dark theme) | Card results (sample query "保温杯") |
+| --- | --- |
+| ![Weiwei Zhaohuo v3.3 workbench](docs/screenshots/01-workbench-v3.3.png) | ![Weiwei Zhaohuo v3.3 card results](docs/screenshots/02-results-card-v3.3.png) |
 
 ## Tech stack
 
